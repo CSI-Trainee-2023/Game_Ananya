@@ -4,3 +4,43 @@
   font-family: sans-serif;
   box-sizing: border-box;
 }
+
+.start{
+  border: 2px rgb(3, 78, 3) solid;
+  background-color: rgba(30, 226, 105, 0.426);
+  padding: 20px 50px;
+  font-size: 50px;
+  font-weight: 800;
+  color:rgba(24, 62, 39, 0.66);
+  position: relative;
+  top: 300px;
+  left: 640px;
+}
+
+.start:hover{
+  cursor: pointer;
+  background-color: rgba(122, 224, 161, 0.426);  
+}
+
+#scoring{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+
+#scoring div{
+  font-size: 30px;
+  font-weight: 800;
+  border: 2px rgb(3, 78, 3) solid;
+  background-color: rgba(30, 226, 105, 0.426);
+  padding: 10px 30px;
+  /* font-size: 50px; */
+  /* font-weight: 800; */
+  color:rgba(24, 62, 39, 0.66);
+  
+}
+.score{
+
+   
+}
