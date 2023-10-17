@@ -25,8 +25,8 @@
 #scoring{
   display: flex;
   justify-content: space-evenly;
-
 }
+
 
 
 #scoring div{
@@ -40,7 +40,12 @@
   color:rgba(24, 62, 39, 0.66);
   
 }
-.score{
 
-   
+#myCar{
+  height: 100px;
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  left: 750px;
+  
 }
