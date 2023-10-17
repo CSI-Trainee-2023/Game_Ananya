@@ -7,14 +7,14 @@
 
 .start{
   border: 2px rgb(3, 78, 3) solid;
-  background-color: rgba(30, 226, 105, 0.426);
-  padding: 20px 50px;
+  background-color: rgba(187, 218, 199, 0.95);
+  padding: 60px 120px;
   font-size: 50px;
   font-weight: 800;
   color:rgba(24, 62, 39, 0.66);
   position: relative;
   top: 300px;
-  left: 640px;
+  left: 555px;
 }
 
 .start:hover{
@@ -48,4 +48,22 @@
   bottom: 0;
   left: 750px;
   
+}
+
+
+#carTrack{
+  width: 400px;
+  height: 91vh;
+  background: #2d3436;
+  margin: auto;
+  /* position: relative; */
+  /* position: absolute; */
+}
+
+#lines{
+  width: 10px;
+  height: 100px;
+  background: #fff;
+  position: absolute;
+  margin-left: 195px;
 }
