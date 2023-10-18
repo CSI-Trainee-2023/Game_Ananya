@@ -1,50 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="indexStyle.css">
-</head>
-<body>
-  <div id="gameplay">
+  <head>
+    <link rel="stylesheet" href="indexStyle.css" />
+  </head>
+  <body>
+    <div id="gameplay">
+      <!-- GAME START SCREEN -->
 
-  <!-- GAME START SCREEN -->
-
-  <div id="gameStart" class="strtbtn">
-    <span class="start" id="startButton">START</span>
-  </div>
-
-  <!-- GAMEPLAY -->
-
-
-    <div id="scoring" class="scoreStrt">
-      <div>
-        <span>SCORE</span>
-        <span id="currentScore" class="score">000</span>
-      </div>
-      <div>
-        <span>HIGHEST</span>
-        <span id="highScore" class="score">000</span>
-      </div>
-      <div>
-        <span id="reStart" class="score">RESTART</span>
+      <div id="gameStart" class="strtbtn">
+        <span
+          class="start"
+          id="startButton"
+          onclick="
+        requestAnimationFrame(moveLines);"
+          >START</span
+        >
       </div>
 
+      <!-- GAMEPLAY -->
+
+      <div id="scoring" class="scoreStrt">
+        <div>
+          <span>SCORE</span>
+          <span id="currentScore" class="score">000</span>
+        </div>
+        <div>
+          <span>HIGHEST</span>
+          <span id="highScore" class="score">000</span>
+        </div>
+        <div>
+          <span id="reStart" class="score">RESTART</span>
+        </div>
+      </div>
+      <div id="road">
+        <div id="middleStrip"></div>
+      </div>
+      <div id="myCar">
+        <img src="assets/enemy6.png" alt="" id="myCar" />
+      </div>
+      <div id="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
     </div>
-    <div id="car">
-      <img src="assets/enemy6.png" alt="" id="myCar">
-    </div>
-    <div id="carTrack">
-      <div id="lines"></div>
-    </div>
-    
-  </div>
-      
-      
 
-  
-
-
-  
-
-  <script src="indexScript.js"></script>
-</body>
+    <script src="indexScript.js"></script>
+  </body>
 </html>
