@@ -9,7 +9,7 @@ let car = document.getElementById("myCar");
 let scorestart = document.getElementById("scoring");
 player.start = false;
 let gameButton = document.getElementById("startButton");
-
+let highS = 0;
 let sc = 0;
 
 document.addEventListener("keydown", scoreStart);
@@ -31,6 +31,7 @@ function carPos(event) {
     scoring = true;
   }
   car.style.left = player.x + "px";
+  event.preventDefault();
 }
 
 function scoreStart(event) {
@@ -53,6 +54,11 @@ function scoreStop(event) {
   }
 }
 
+restartOption.addEventListener("click", restart);
+function restart() {
+  location.reload();
+}
+
 function scoringLoop() {
   if (scoring) {
     sc++;
@@ -63,8 +69,11 @@ function scoringLoop() {
       scc = "0" + scc;
     }
     score.innerHTML = scc;
+    if (scc > highS) {
+      highS = scc;
+    }
+    high.innerHTML = highS;
   }
-  // console.log(sc);
 }
 setInterval(scoringLoop, 100);
 
@@ -87,7 +96,7 @@ let lineSpeed = 6;
 let lines = document.querySelectorAll(".line");
 
 for (let i = 0; i < lines.length; i++) {
-  lines[i].style.top = `${i * 60}px`; // Set initial positions for each line
+  lines[i].style.top = `${i * 60}px`;
 }
 
 function moveLines() {
@@ -95,10 +104,8 @@ function moveLines() {
     let currentTop = parseInt(lines[i].style.top) || 0;
     lines[i].style.top = currentTop + lineSpeed + "px";
 
-    // Reset the position when a line goes below the container
     if (currentTop > 800) {
-      // Adjust the value based on your road's height
-      lines[i].style.top = "-40px"; // Place the line just above the container
+      lines[i].style.top = "-40px";
     }
   }
 
